@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bftlfj5ql7bk1"]
+
+[ext_resource type="PackedScene" uid="uid://b0l3pn541wsny" path="res://UI/desktop_startbutton.tscn" id="1_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://daou4qbwdwe8" path="res://UI/start_buttons_module.tscn" id="2_ia1lp"]
+[ext_resource type="PackedScene" uid="uid://ckmkx01l4fjy2" path="res://text_file_module.tscn" id="2_sasra"]
+
+[node name="TestScene" type="Control" unique_id=1731064936]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=2054340246]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Iniciar" parent="." unique_id=1124152660 node_paths=PackedStringArray("start_buttons") instance=ExtResource("1_ia1lp")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.018
+anchor_top = 0.635
+anchor_right = 0.142
+anchor_bottom = 0.8
+offset_top = 652.0
+grow_horizontal = 1
+grow_vertical = 2
+start_buttons = NodePath("../StartButtonsModule")
+
+[node name="StartButtonsModule" parent="." unique_id=1416401789 instance=ExtResource("2_ia1lp")]
+layout_mode = 1
+anchor_left = -0.095
+anchor_top = 0.858
+anchor_right = 0.071
+anchor_bottom = 0.867
+offset_left = 299.4
+offset_top = -744.63995
+offset_right = 293.83997
+offset_bottom = -0.6399536
+
+[node name="TextFileModule" parent="." unique_id=356628770 instance=ExtResource("2_sasra")]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 703.0
+offset_right = 902.0
+offset_bottom = 703.0
+texto = "Senhas"
+
+[node name="TextFileModule2" parent="." unique_id=2081889168 instance=ExtResource("2_sasra")]
+layout_mode = 0
+offset_left = 1430.0
+offset_top = 465.0
+offset_right = 1430.0
+offset_bottom = 465.0
+texto = "Instruções"

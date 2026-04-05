@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b0l3pn541wsny"]
+
+[ext_resource type="Script" uid="uid://c1cli0haqh5rb" path="res://UI/desktop_startbutton.gd" id="1_eglv1"]
+[ext_resource type="Texture2D" uid="uid://dghxdyjfoi0qb" path="res://addons/placeholder_desktopstart_icon.png" id="2_g5g1s"]
+
+[node name="Iniciar" type="Control" unique_id=1124152660]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_eglv1")
+
+[node name="IniciarButton" type="TextureButton" parent="." unique_id=321231988]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+offset_top = -72.0
+texture_normal = ExtResource("2_g5g1s")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="IniciarButton" to="." method="_on_iniciar_button_pressed"]
