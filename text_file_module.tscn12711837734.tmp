@@ -11,12 +11,12 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_kmrlc")
 
-[node name="TextFileIcon" type="TextureRect" parent="." unique_id=1152666601]
+[node name="TextFileIcon" type="TextureButton" parent="." unique_id=225407177]
 texture_filter = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_ujmaq")
+texture_normal = ExtResource("1_ujmaq")
 
 [node name="Label" type="Label" parent="TextFileIcon" unique_id=1860200538]
 unique_name_in_owner = true
@@ -38,3 +38,5 @@ label_settings = SubResource("LabelSettings_ujmaq")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextFileIcon" to="." method="_on_text_file_icon_pressed"]

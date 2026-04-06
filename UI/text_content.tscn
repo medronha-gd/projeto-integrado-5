@@ -1,56 +1,56 @@
-[gd_scene format=3 uid="uid://bftlfj5ql7bk1"]
+[gd_scene format=3 uid="uid://bfs05e57hae7r"]
 
-[ext_resource type="PackedScene" uid="uid://b0l3pn541wsny" path="res://UI/desktop_startbutton.tscn" id="1_ia1lp"]
-[ext_resource type="PackedScene" uid="uid://daou4qbwdwe8" path="res://UI/start_buttons_module.tscn" id="2_ia1lp"]
-[ext_resource type="PackedScene" uid="uid://ckmkx01l4fjy2" path="res://UI/text_file_module.tscn" id="2_sasra"]
-[ext_resource type="PackedScene" uid="uid://bfs05e57hae7r" path="res://UI/text_content.tscn" id="4_coq8p"]
+[ext_resource type="Texture2D" uid="uid://ccc40ekvoyvb7" path="res://icon.svg" id="1_1bi4e"]
+[ext_resource type="Script" uid="uid://c25lddncts2y3" path="res://UI/text_content.gd" id="1_kvtaf"]
+[ext_resource type="PackedScene" uid="uid://b8evoxt0vrikc" path="res://drag_node.tscn" id="3_lpevx"]
 
-[node name="TestScene" type="Control" unique_id=1731064936]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1bi4e"]
+
+[node name="TextContent" type="Control" unique_id=1393098221]
+process_mode = 3
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_left = 0.394
+anchor_top = 0.119
+anchor_right = 0.765
+anchor_bottom = 0.735
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -160.79993
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("1_kvtaf")
 
-[node name="Panel" type="Panel" parent="." unique_id=2054340246]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -55.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-
-[node name="Iniciar" parent="." unique_id=1124152660 node_paths=PackedStringArray("start_buttons") instance=ExtResource("1_ia1lp")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0
-anchor_top = 1.0
-anchor_right = 0.053
-anchor_bottom = 1.0
-offset_top = -32.0
-grow_horizontal = 1
-grow_vertical = 0
-start_buttons = NodePath("../StartButtonsModule")
-
-[node name="StartButtonsModule" parent="." unique_id=1416401789 instance=ExtResource("2_ia1lp")]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=448100032]
 layout_mode = 1
 anchors_preset = 15
-anchor_top = 0.0
 anchor_right = 1.0
-offset_left = 0.0
-offset_top = 530.0
-offset_right = -1476.0
-offset_bottom = -58.0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextContent" parent="." unique_id=1393098221 node_paths=PackedStringArray("text_file_module") instance=ExtResource("4_coq8p")]
-layout_mode = 1
-textual_content = "60% dos jovens de periferia sem antecedentes criminais
+[node name="CloseButton" type="TextureButton" parent="PanelContainer" unique_id=600473400]
+material = SubResource("CanvasItemMaterial_1bi4e")
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture_normal = ExtResource("1_1bi4e")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1307531771]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 27.52002
+offset_top = 143.48
+offset_right = 542.52
+offset_bottom = 678.48
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer" unique_id=651891797]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "60% dos jovens de periferia sem antecedentes criminais
 Já sofreram violência policial
 A cada 4 pessoas mortas pela polícia, 3 são negras
 Nas universidades brasileiras, apenas 2% dos alunos são negros
@@ -227,21 +227,32 @@ Eu sou apenas um rapaz latino-americano
 Apoiado por mais de 50 mil manos
 Efeito colateral que o seu sistema fez
 Racionais Capítulo 4, Versículo 3"
-text_file_module = NodePath("../TextFileModule")
+fit_content = true
 
-[node name="TextContent2" parent="." unique_id=1079292114 node_paths=PackedStringArray("text_file_module") instance=ExtResource("4_coq8p")]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=279965032]
 layout_mode = 1
-textual_content = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-text_file_module = NodePath("../TextFileModule2")
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.01
+anchor_right = 0.3
+anchor_bottom = 0.01
+offset_left = -0.052781105
+offset_right = 0.19871521
+offset_bottom = 17.553276
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
 
-[node name="TextFileModule" parent="." unique_id=356628770 instance=ExtResource("2_sasra")]
-layout_mode = 0
-texto = "Teste"
+[node name="NomeArquivo" type="Label" parent="VBoxContainer" unique_id=1728897089]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Nome do Arquivo "
 
-[node name="TextFileModule2" parent="." unique_id=1194395994 instance=ExtResource("2_sasra")]
-layout_mode = 0
-offset_left = 402.0
-offset_top = 178.0
-offset_right = 402.0
-offset_bottom = 178.0
-texto = "Gritos"
+[node name="DragNode" parent="." unique_id=1171118068 instance=ExtResource("3_lpevx")]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=1584114425]
+oversampling_override = 1.0
+position = Vector2i(63, 222)
+visible = true
+ok_button_text = "Close"
+
+[connection signal="pressed" from="PanelContainer/CloseButton" to="." method="_on_close_button_pressed"]

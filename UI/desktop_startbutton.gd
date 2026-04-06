@@ -1,5 +1,4 @@
 extends Control
-
 @export var start_buttons: StartMenuModule
 
 

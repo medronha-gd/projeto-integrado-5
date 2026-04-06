@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ckmkx01l4fjy2"]
+
+[ext_resource type="Script" uid="uid://cv2jnqsyqd144" path="res://UI/text_file_module.gd" id="1_kmrlc"]
+[ext_resource type="Texture2D" uid="uid://0shu4m0g4fn0" path="res://addons/placeholder_text_icon.png" id="1_ujmaq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ujmaq"]
+font_size = 9
+
+[node name="TextFileModule" type="Control" unique_id=356628770]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kmrlc")
+
+[node name="TextFileIcon" type="TextureButton" parent="." unique_id=225407177]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_ujmaq")
+
+[node name="Label" type="Label" parent="TextFileIcon" unique_id=1860200538]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1.95, 1.925)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.9750001
+offset_top = -6.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Nome
+do
+Arquivo"
+label_settings = SubResource("LabelSettings_ujmaq")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextFileIcon" to="." method="_on_text_file_icon_pressed"]

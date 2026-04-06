@@ -13,6 +13,7 @@ offset_top = -744.0
 offset_right = -1.5600281
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 1
 script = ExtResource("1_vheb3")
 
 [node name="ButtonHolder" type="VBoxContainer" parent="." unique_id=1481984238]
