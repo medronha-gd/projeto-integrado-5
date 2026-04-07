@@ -249,10 +249,4 @@ text = "Nome do Arquivo "
 
 [node name="DragNode" parent="." unique_id=1171118068 instance=ExtResource("3_lpevx")]
 
-[node name="AcceptDialog" type="AcceptDialog" parent="." unique_id=1584114425]
-oversampling_override = 1.0
-position = Vector2i(63, 222)
-visible = true
-ok_button_text = "Close"
-
 [connection signal="pressed" from="PanelContainer/CloseButton" to="." method="_on_close_button_pressed"]
