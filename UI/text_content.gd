@@ -18,4 +18,6 @@ func _on_close_button_pressed() -> void:
 func open(text: String) -> void:
 	
 	self.visible = true
+	self.global_position = get_viewport().get_mouse_position()
+
 	%NomeArquivo.text = text

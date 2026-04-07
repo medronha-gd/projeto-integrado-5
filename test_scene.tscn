@@ -231,6 +231,10 @@ text_file_module = NodePath("../TextFileModule")
 
 [node name="TextContent2" parent="." unique_id=1079292114 node_paths=PackedStringArray("text_file_module") instance=ExtResource("4_coq8p")]
 layout_mode = 1
+offset_left = 384.52002
+offset_top = -13.520004
+offset_right = 243.7201
+offset_bottom = 26.47998
 textual_content = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 text_file_module = NodePath("../TextFileModule2")
 
