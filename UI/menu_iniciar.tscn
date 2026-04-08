@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bkn6opq7p0ffq"]
 
 [ext_resource type="Texture2D" uid="uid://dghxdyjfoi0qb" path="res://addons/placeholder_desktopstart_icon.png" id="1_d7irw"]
-[ext_resource type="Script" uid="uid://cnod5vksv31w5" path="res://NovosScripts/menu_iniciar.gd" id="1_uxc8s"]
+[ext_resource type="Script" uid="uid://cnod5vksv31w5" path="res://UI/menu_iniciar.gd" id="1_uxc8s"]
 
 [sub_resource type="Gradient" id="Gradient_uxc8s"]
 offsets = PackedFloat32Array(0.0022727272, 1)
@@ -27,7 +27,6 @@ script = ExtResource("1_uxc8s")
 metadata/_edit_horizontal_guides_ = [1063.0]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2020855776]
-process_mode = 3
 
 [node name="Caixa" type="VBoxContainer" parent="CanvasLayer" unique_id=626293812]
 anchors_preset = 12
@@ -37,6 +36,7 @@ anchor_bottom = 1.0
 offset_top = -106.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="MenuButton" type="TextureButton" parent="CanvasLayer/Caixa" unique_id=23676238]
 unique_name_in_owner = true
@@ -53,49 +53,30 @@ anchor_bottom = 1.0
 offset_top = -0.16009521
 offset_right = 1920.0
 grow_vertical = 2
+mouse_filter = 2
 texture = SubResource("GradientTexture2D_r6l6s")
 
-[node name="PainelMenu" type="Panel" parent="CanvasLayer" unique_id=1204807097]
+[node name="ButtonHolder" type="VBoxContainer" parent="CanvasLayer" unique_id=1813587515]
 unique_name_in_owner = true
-anchors_preset = -1
-anchor_left = 0.004
-anchor_top = 0.453
-anchor_right = 0.174
-anchor_bottom = 0.91
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 1
-
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/PainelMenu" unique_id=1549025488]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 29.0
-offset_top = 262.0
-offset_right = -38.0
-offset_bottom = -22.0
-grow_horizontal = 2
+visible = false
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 363.0
+offset_right = 273.0
+offset_bottom = 433.0
 grow_vertical = 2
-mouse_filter = 1
-patch_margin_left = 172
-patch_margin_bottom = 50
+mouse_filter = 2
 
-[node name="ButtonHolder" type="VBoxContainer" parent="CanvasLayer/PainelMenu/NinePatchRect" unique_id=1813587515]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Quit" type="Button" parent="CanvasLayer/PainelMenu/NinePatchRect/ButtonHolder" unique_id=2098561695]
+[node name="Quit" type="Button" parent="CanvasLayer/ButtonHolder" unique_id=2098561695]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Desligar
+"
 
-[node name="Restart" type="Button" parent="CanvasLayer/PainelMenu/NinePatchRect/ButtonHolder" unique_id=7131515]
+[node name="Restart" type="Button" parent="CanvasLayer/ButtonHolder" unique_id=7131515]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Restart"
 
 [connection signal="pressed" from="CanvasLayer/Caixa/MenuButton" to="." method="_on_menu_button_pressed"]

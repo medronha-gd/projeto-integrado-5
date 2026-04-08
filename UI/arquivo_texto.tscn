@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxa6f3i7c1e6i"]
 
 [ext_resource type="Texture2D" uid="uid://0shu4m0g4fn0" path="res://addons/placeholder_text_icon.png" id="1_50fs5"]
-[ext_resource type="Script" uid="uid://bm4h5ewypl7jj" path="res://NovosScripts/arquivo_texto.gd" id="2_7yy6j"]
+[ext_resource type="Script" uid="uid://bm4h5ewypl7jj" path="res://UI/arquivo_texto.gd" id="2_7yy6j"]
 [ext_resource type="Resource" uid="uid://bq1j2o02i0mds" path="res://text_resources/teste_de_texto.tres" id="3_y2kn3"]
 [ext_resource type="Texture2D" uid="uid://dghxdyjfoi0qb" path="res://addons/placeholder_desktopstart_icon.png" id="4_y2kn3"]
 
@@ -25,6 +25,7 @@ conteudo_textual = ExtResource("3_y2kn3")
 
 [node name="PainelMestre" type="Control" parent="." unique_id=461788608]
 unique_name_in_owner = true
+visible = false
 z_index = 1
 custom_minimum_size = Vector2(490, 446)
 layout_mode = 1

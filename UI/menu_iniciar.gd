@@ -5,7 +5,6 @@ func _ready() -> void:
 	for child: Button in %ButtonHolder.get_children():
 		child.pressed.connect(pressed_btn.bind(child))
 	
-	%PainelMenu.visible = false
 
 
 func pressed_btn(_button: Button):
@@ -17,8 +16,8 @@ func pressed_btn(_button: Button):
 
 
 func _on_menu_button_pressed() -> void:
-	print("balls")
-	if %PainelMenu.visible:
-		%PainelMenu.visible = false
+	print("pressed")
+	if %ButtonHolder.visible:
+		%ButtonHolder.visible = false
 	else:
-		%PainelMenu.visible = true
+		%ButtonHolder.visible = true

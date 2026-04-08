@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bftlfj5ql7bk1"]
+
+[ext_resource type="PackedScene" uid="uid://bkn6opq7p0ffq" path="res://UI/menu_iniciar.tscn" id="1_66nsv"]
+[ext_resource type="PackedScene" uid="uid://cxa6f3i7c1e6i" path="res://UI/arquivo_texto.tscn" id="2_epxgt"]
+
+[node name="CenaTeste" type="Control" unique_id=349374057]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuIniciar" parent="." unique_id=1022275865 instance=ExtResource("1_66nsv")]
+layout_mode = 1
+
+[node name="ArquivoTexto" parent="." unique_id=1111402937 instance=ExtResource("2_epxgt")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -32.0
+offset_right = 0.0
+grow_horizontal = 0
