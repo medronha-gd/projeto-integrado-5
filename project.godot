@@ -31,7 +31,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gwj_accessibility_scripts/plugin.cfg", "res://addons/type_writer_label/plugin.cfg")
+enabled=PackedStringArray()
 
 [file_customization]
 

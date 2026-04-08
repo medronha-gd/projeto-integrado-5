@@ -1,56 +1,10 @@
-[gd_scene format=3 uid="uid://bfs05e57hae7r"]
+[gd_resource type="Resource" script_class="ConteudoTextual" format=3 uid="uid://bq1j2o02i0mds"]
 
-[ext_resource type="Texture2D" uid="uid://ccc40ekvoyvb7" path="res://icon.svg" id="1_1bi4e"]
-[ext_resource type="Script" uid="uid://c25lddncts2y3" path="res://UI/text_content.gd" id="1_kvtaf"]
-[ext_resource type="PackedScene" uid="uid://b8evoxt0vrikc" path="res://drag_node.tscn" id="3_lpevx"]
+[ext_resource type="Script" uid="uid://do2h1t5dbul20" path="res://text_resources/classe_textos.gd" id="1_5peem"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1bi4e"]
-
-[node name="TextContent" type="Control" unique_id=1393098221]
-process_mode = 3
-layout_mode = 3
-anchor_left = 0.394
-anchor_top = 0.119
-anchor_right = 0.765
-anchor_bottom = 0.735
-offset_left = -20.0
-offset_top = -20.0
-offset_right = -160.79993
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-script = ExtResource("1_kvtaf")
-
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=448100032]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CloseButton" type="TextureButton" parent="PanelContainer" unique_id=600473400]
-material = SubResource("CanvasItemMaterial_1bi4e")
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-texture_normal = ExtResource("1_1bi4e")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1307531771]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 27.52002
-offset_top = 143.48
-offset_right = 542.52
-offset_bottom = 678.48
-
-[node name="Label" type="RichTextLabel" parent="ScrollContainer" unique_id=651891797]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-bbcode_enabled = true
-text = "60% dos jovens de periferia sem antecedentes criminais
+[resource]
+script = ExtResource("1_5peem")
+textual_value = "60% dos jovens de periferia sem antecedentes criminais
 Já sofreram violência policial
 A cada 4 pessoas mortas pela polícia, 3 são negras
 Nas universidades brasileiras, apenas 2% dos alunos são negros
@@ -227,26 +181,4 @@ Eu sou apenas um rapaz latino-americano
 Apoiado por mais de 50 mil manos
 Efeito colateral que o seu sistema fez
 Racionais Capítulo 4, Versículo 3"
-fit_content = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=279965032]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.01
-anchor_right = 0.3
-anchor_bottom = 0.01
-offset_left = -0.052781105
-offset_right = 0.19871521
-offset_bottom = 17.553276
-grow_horizontal = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="NomeArquivo" type="Label" parent="VBoxContainer" unique_id=1728897089]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Nome do Arquivo "
-
-[node name="DragNode" parent="." unique_id=1171118068 instance=ExtResource("3_lpevx")]
-
-[connection signal="pressed" from="PanelContainer/CloseButton" to="." method="_on_close_button_pressed"]
+metadata/_custom_type_script = "uid://do2h1t5dbul20"
