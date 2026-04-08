@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://b8evoxt0vrikc"]
-
-[ext_resource type="Script" uid="uid://c1g5rjyuvi8fw" path="res://drag_node.gd" id="1_hjbjg"]
-
-[node name="DragNode" type="Node" unique_id=1171118068]
-script = ExtResource("1_hjbjg")

@@ -37,7 +37,8 @@ enabled=PackedStringArray()
 
 folder_colors={
 "res://UI/": "green",
-"res://addons/": "pink"
+"res://addons/": "pink",
+"res://text_resources/": "yellow"
 }
 
 [physics]
