@@ -16,9 +16,7 @@ layout_mode = 1
 
 [node name="ArquivoTexto" parent="." unique_id=1111402937 instance=ExtResource("2_epxgt")]
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -32.0
-offset_right = 0.0
-grow_horizontal = 0
+offset_left = -599.0
+offset_top = -211.0
+offset_right = -567.0
+offset_bottom = -179.0

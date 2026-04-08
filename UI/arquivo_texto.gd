@@ -33,5 +33,6 @@ func _on_fechar_pressed() -> void:
 func centralizar_painel():
 	var screen_size: Vector2 = get_viewport_rect().size
 	var panel_size: Vector2 = %PainelMestre.size
-	
+
+
 	%PainelMestre.global_position = (screen_size - panel_size) / 2
