@@ -21,13 +21,15 @@ func arquivo_on_pressed() -> void:
 	else:
 		centralizar_painel()
 		%PainelMestre.visible = true
+		UIAnimation.animate_pop(%PainelMestre, 0.5)
 
 
 func _on_fechar_pressed() -> void:
 	if %PainelMestre.visible:
 		%PainelMestre.visible = false
-	else:
-		%PainelMestre.visible = true
+	#else:
+		#%PainelMestre.visible = true
+		
 		
 		
 func centralizar_painel():
