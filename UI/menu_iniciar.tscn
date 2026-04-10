@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dghxdyjfoi0qb" path="res://addons/placeholder_desktopstart_icon.png" id="1_d7irw"]
 [ext_resource type="Script" uid="uid://cnod5vksv31w5" path="res://UI/menu_iniciar.gd" id="1_uxc8s"]
+[ext_resource type="Texture2D" uid="uid://don3jr4x7p747" path="res://addons/placeholder_Exit.png" id="3_ok8u4"]
+[ext_resource type="Texture2D" uid="uid://4ht6ghfw3cha" path="res://addons/placeholder_Power - Restart.png" id="4_6m1ds"]
 
 [sub_resource type="Gradient" id="Gradient_uxc8s"]
 offsets = PackedFloat32Array(0.0022727272, 1)
@@ -56,27 +58,53 @@ grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("GradientTexture2D_r6l6s")
 
-[node name="ButtonHolder" type="VBoxContainer" parent="CanvasLayer" unique_id=1813587515]
+[node name="PainelCentral" type="Control" parent="CanvasLayer" unique_id=1380889977]
 unique_name_in_owner = true
-visible = false
-anchors_preset = 4
-anchor_top = 0.5
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 3
+anchor_top = 0.48
+anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = 363.0
-offset_right = 273.0
-offset_bottom = 433.0
+offset_left = 840.0
+offset_top = 64.0
+offset_right = -839.0
+offset_bottom = 431.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonHolder" type="VBoxContainer" parent="CanvasLayer/PainelCentral" unique_id=1813587515]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Quit" type="Button" parent="CanvasLayer/ButtonHolder" unique_id=2098561695]
+[node name="Quit" type="Button" parent="CanvasLayer/PainelCentral/ButtonHolder" unique_id=2098561695]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Desligar
 "
+icon = ExtResource("3_ok8u4")
+flat = true
 
-[node name="Restart" type="Button" parent="CanvasLayer/ButtonHolder" unique_id=7131515]
+[node name="Restart" type="Button" parent="CanvasLayer/PainelCentral/ButtonHolder" unique_id=7131515]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Restart"
+icon = ExtResource("4_6m1ds")
+flat = true
+
+[node name="Fundo" type="Panel" parent="CanvasLayer/PainelCentral" unique_id=1081593535]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [connection signal="pressed" from="CanvasLayer/Caixa/MenuButton" to="." method="_on_menu_button_pressed"]

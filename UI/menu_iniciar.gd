@@ -3,8 +3,9 @@ extends Control
 
 func _ready() -> void:
 	for child: Button in %ButtonHolder.get_children():
-		child.pressed.connect(pressed_btn.bind(child))
-	
+		if child is BaseButton:
+			child.pressed.connect(pressed_btn.bind(child))
+	%PainelCentral.hide()
 
 
 func pressed_btn(_button: Button):
@@ -16,8 +17,15 @@ func pressed_btn(_button: Button):
 
 
 func _on_menu_button_pressed() -> void:
-	print("pressed")
-	if %ButtonHolder.visible:
-		%ButtonHolder.visible = false
+	if %PainelCentral.visible:
+		%PainelCentral.visible = false
 	else:
-		%ButtonHolder.visible = true
+		%PainelCentral.visible = true
+
+
+
+func _input(event):
+	if event is InputEventMouseButton and event.pressed:
+		if %PainelCentral.visible:
+			if not %PainelCentral.get_global_rect().has_point(get_global_mouse_position()):
+				%PainelCentral.visible = false
