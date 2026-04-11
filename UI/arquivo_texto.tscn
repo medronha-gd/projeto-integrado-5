@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bm4h5ewypl7jj" path="res://UI/arquivo_texto.gd" id="2_7yy6j"]
 [ext_resource type="Resource" uid="uid://bq1j2o02i0mds" path="res://text_resources/teste_de_texto.tres" id="3_y2kn3"]
 [ext_resource type="Texture2D" uid="uid://dghxdyjfoi0qb" path="res://addons/placeholder_desktopstart_icon.png" id="4_y2kn3"]
+[ext_resource type="LabelSettings" uid="uid://dxhu1ip18d23g" path="res://new_label_settings.tres" id="5_6ncud"]
 
 [node name="ArquivoTexto" type="TextureButton" unique_id=1111402937]
 anchors_preset = 8
@@ -25,63 +26,50 @@ conteudo_textual = ExtResource("3_y2kn3")
 
 [node name="PainelMestre" type="Control" parent="." unique_id=461788608]
 unique_name_in_owner = true
-visible = false
 z_index = 1
-custom_minimum_size = Vector2(490, 446)
-layout_mode = 1
-anchor_left = -7.6250005
-anchor_top = -7.8750005
-anchor_right = 7.6870003
-anchor_bottom = 6.0620003
-offset_left = -38.999985
-offset_top = -95.999985
-offset_right = 27.015991
-offset_bottom = 48.01599
-grow_horizontal = 2
-grow_vertical = 2
+custom_minimum_size = Vector2(600, 500)
+anchors_preset = 0
+offset_right = 490.0
+offset_bottom = 446.0
 mouse_filter = 1
 
 [node name="Fundo" type="PanelContainer" parent="PainelMestre" unique_id=1327513871]
 unique_name_in_owner = true
 z_index = -1
-custom_minimum_size = Vector2(561, 561)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = 1.0
-offset_right = 1.0
-offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
 [node name="Fechar" type="TextureButton" parent="PainelMestre" unique_id=1986420758]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 50)
+custom_minimum_size = Vector2(35, 35)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -50.0
-offset_bottom = 50.0
+offset_left = -35.0
+offset_bottom = 35.0
 grow_horizontal = 0
 size_flags_horizontal = 4
 texture_normal = ExtResource("4_y2kn3")
 ignore_texture_size = true
 
 [node name="Scroll" type="ScrollContainer" parent="PainelMestre" unique_id=1146712742]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(400, 400)
 layout_mode = 1
-anchors_preset = 14
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 18.0
-offset_top = -146.0
-offset_right = -24.0
-offset_bottom = 267.0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
@@ -94,25 +82,24 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 bbcode_enabled = true
-text = "Não escreva aqui! Atribua um Resource do tipo ConteudoTextual na node raiz🦶🏾"
+text = "Não escreva aqui! Atribua um Resource do tipo ConteudoTextual na node raiz!"
 fit_content = true
 shortcut_keys_enabled = false
 vertical_alignment = 1
 
 [node name="CaixaDeTitulo" type="VBoxContainer" parent="PainelMestre" unique_id=699018575]
-custom_minimum_size = Vector2(556, 33)
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.028
-offset_bottom = 16.48
-grow_horizontal = 2
+offset_right = 45.0
+offset_bottom = 23.0
 
 [node name="TituloArquivo" type="Label" parent="PainelMestre/CaixaDeTitulo" unique_id=894160347]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "Titulo"
+label_settings = ExtResource("5_6ncud")
 
 [node name="NomeArquivo" type="RichTextLabel" parent="." unique_id=368348277]
 unique_name_in_owner = true

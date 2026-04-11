@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dxhu1ip18d23g"]
+
+[ext_resource type="FontFile" uid="uid://cu13nrlmn0uom" path="res://addons/Jupiteroid-Regular.ttf" id="1_1nvk1"]
+
+[resource]
+font = ExtResource("1_1nvk1")
