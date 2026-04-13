@@ -9,13 +9,13 @@ func _ready() -> void:
 	if texto != null:
 		%TextoBriefing.text = texto.textual_value
 	
-	for child: Button in %ButtonContainer.get_children():
+	for child: BaseButton in %ButtonContainer.get_children():
 		if child is BaseButton:
 			child.pressed.connect(on_pressed_button.bind(child))
 
 
 func on_pressed_button(_button: Button) -> void:
-	match _button.name:
+	match _button.name: # Verifica pelo nome do botão tocado
 		"Escolha01":
 			print("O botão 1 foi tocado..")
 		"Escolha02":
