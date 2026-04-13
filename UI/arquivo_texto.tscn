@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cxa6f3i7c1e6i"]
 
 [ext_resource type="Texture2D" uid="uid://0shu4m0g4fn0" path="res://addons/placeholder_text_icon.png" id="1_50fs5"]
+[ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://tema_ui.tres" id="1_csbg0"]
 [ext_resource type="Script" uid="uid://bm4h5ewypl7jj" path="res://UI/arquivo_texto.gd" id="2_7yy6j"]
 [ext_resource type="Resource" uid="uid://bq1j2o02i0mds" path="res://text_resources/teste_de_texto.tres" id="3_y2kn3"]
 [ext_resource type="Texture2D" uid="uid://dghxdyjfoi0qb" path="res://addons/placeholder_desktopstart_icon.png" id="4_y2kn3"]
@@ -20,6 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("1_csbg0")
 texture_normal = ExtResource("1_50fs5")
 script = ExtResource("2_7yy6j")
 conteudo_textual = ExtResource("3_y2kn3")
@@ -32,6 +34,7 @@ anchors_preset = 0
 offset_right = 490.0
 offset_bottom = 446.0
 mouse_filter = 1
+theme = ExtResource("1_csbg0")
 
 [node name="Fundo" type="PanelContainer" parent="PainelMestre" unique_id=1327513871]
 unique_name_in_owner = true
@@ -43,6 +46,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("1_csbg0")
 
 [node name="Fechar" type="TextureButton" parent="PainelMestre" unique_id=1986420758]
 unique_name_in_owner = true
@@ -55,6 +59,7 @@ offset_left = -35.0
 offset_bottom = 35.0
 grow_horizontal = 0
 size_flags_horizontal = 4
+theme = ExtResource("1_csbg0")
 texture_normal = ExtResource("4_y2kn3")
 ignore_texture_size = true
 
@@ -73,6 +78,7 @@ offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
+theme = ExtResource("1_csbg0")
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 4
 
@@ -81,6 +87,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("1_csbg0")
 bbcode_enabled = true
 text = "Não escreva aqui! Atribua um Resource do tipo ConteudoTextual na node raiz!"
 fit_content = true
@@ -92,12 +99,14 @@ custom_minimum_size = Vector2(20, 20)
 layout_mode = 1
 offset_right = 45.0
 offset_bottom = 23.0
+theme = ExtResource("1_csbg0")
 
 [node name="TituloArquivo" type="Label" parent="PainelMestre/CaixaDeTitulo" unique_id=894160347]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+theme = ExtResource("1_csbg0")
 text = "Titulo"
 label_settings = ExtResource("5_6ncud")
 
@@ -108,6 +117,7 @@ offset_left = -10.0
 offset_top = 28.0
 offset_right = 41.0
 offset_bottom = 40.0
+theme = ExtResource("1_csbg0")
 text = "Texto"
 fit_content = true
 scroll_active = false

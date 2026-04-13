@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bqskmv7be6ykg"]
+
+[ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://tema_ui.tres" id="1_thqkt"]
+[ext_resource type="Texture2D" uid="uid://bo5ssmxe0fnck" path="res://addons/placeholder_imagem.png" id="2_8u4qo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8u4qo"]
+content_margin_left = 190.0
+
+[node name="Briefing" type="Control" unique_id=866072675]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=2107307039]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_thqkt")
+current_tab = 1
+
+[node name="Briefing" type="Control" parent="TabContainer" unique_id=756398031]
+visible = false
+layout_mode = 2
+mouse_filter = 1
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Briefing" unique_id=47927102]
+custom_minimum_size = Vector2(999, 500)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextoBriefing" type="RichTextLabel" parent="TabContainer/Briefing/ScrollContainer" unique_id=43308579]
+custom_minimum_size = Vector2(1000, 800)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 1
+bbcode_enabled = true
+text = "[b]Texto do briefing aqui[/b]"
+fit_content = true
+
+[node name="CenterContainer" type="Control" parent="TabContainer/Briefing" unique_id=42773141]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.73020834
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 500.0
+grow_horizontal = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ImagemDoBriefing" type="TextureRect" parent="TabContainer/Briefing/CenterContainer" unique_id=1259042950]
+texture_filter = 1
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -500.0
+offset_bottom = 500.0
+grow_horizontal = 0
+texture = ExtResource("2_8u4qo")
+
+[node name="Escolhas" type="Control" parent="TabContainer" unique_id=870904623]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ButtonContainer" type="HBoxContainer" parent="TabContainer/Escolhas" unique_id=1438864870]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42700002
+anchor_top = 0.381
+anchor_right = 0.573
+anchor_bottom = 0.619
+offset_left = 0.15997314
+offset_top = 0.30697632
+offset_right = -0.16003418
+offset_bottom = -0.30700684
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_thqkt")
+theme_override_constants/separation = 25
+metadata/_edit_use_anchors_ = true
+
+[node name="Escolha" type="Button" parent="TabContainer/Escolhas/ButtonContainer" unique_id=1610488353]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8u4qo")
+text = "BUTON01"
+flat = true
+
+[node name="Escolha2" type="Button" parent="TabContainer/Escolhas/ButtonContainer" unique_id=2144898677]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8u4qo")
+text = "BUTÃO 2!!!"
+flat = true
+
+[node name="Escolha3" type="Button" parent="TabContainer/Escolhas/ButtonContainer" unique_id=715813787]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8u4qo")
+text = "TESTE AGGGGH!!"
+flat = true

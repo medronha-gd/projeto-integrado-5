@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 
 GlobalReference="*uid://6uixtc45yg54"
 UIAnimation="*uid://cawfyydj325or"
+Geral="*uid://c1l6gebyysxea"
 
 [display]
 

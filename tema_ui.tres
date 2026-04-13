@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://b0kt1nwyk05wm"]
+
+[ext_resource type="FontFile" uid="uid://cu13nrlmn0uom" path="res://addons/Jupiteroid-Regular.ttf" id="1_tgdqv"]
+
+[resource]
+default_font = ExtResource("1_tgdqv")
+Button/colors/font_hover_color = Color(4.3985453, 4.3985453, 4.3985453, 1)
