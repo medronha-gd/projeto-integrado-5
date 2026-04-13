@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://bqskmv7be6ykg"]
 
-[ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://tema_ui.tres" id="1_thqkt"]
-[ext_resource type="Texture2D" uid="uid://bo5ssmxe0fnck" path="res://addons/placeholder_imagem.png" id="2_8u4qo"]
+[ext_resource type="Script" uid="uid://cobgsnemb2odo" path="res://UI/briefing.gd" id="1_scmql"]
+[ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://tema_ui.tres" id="2_ln3e5"]
+[ext_resource type="Texture2D" uid="uid://bo5ssmxe0fnck" path="res://addons/placeholder_imagem.png" id="3_5ajy2"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8u4qo"]
-content_margin_left = 190.0
-
-[node name="Briefing" type="Control" unique_id=866072675]
+[node name="BriefingModule" type="Control" unique_id=866072675]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,8 +12,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("1_scmql")
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=2107307039]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 1
 anchors_preset = 15
@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_thqkt")
+theme = ExtResource("2_ln3e5")
 current_tab = 1
 
 [node name="Briefing" type="Control" parent="TabContainer" unique_id=756398031]
@@ -73,44 +73,49 @@ anchor_right = 1.0
 offset_left = -500.0
 offset_bottom = 500.0
 grow_horizontal = 0
-texture = ExtResource("2_8u4qo")
+texture = ExtResource("3_5ajy2")
 
 [node name="Escolhas" type="Control" parent="TabContainer" unique_id=870904623]
 layout_mode = 2
+mouse_filter = 1
 metadata/_tab_index = 1
 
 [node name="ButtonContainer" type="HBoxContainer" parent="TabContainer/Escolhas" unique_id=1438864870]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.42700002
-anchor_top = 0.381
-anchor_right = 0.573
-anchor_bottom = 0.619
-offset_left = 0.15997314
-offset_top = 0.30697632
-offset_right = -0.16003418
-offset_bottom = -0.30700684
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_thqkt")
+theme = ExtResource("2_ln3e5")
 theme_override_constants/separation = 25
-metadata/_edit_use_anchors_ = true
 
 [node name="Escolha" type="Button" parent="TabContainer/Escolhas/ButtonContainer" unique_id=1610488353]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_8u4qo")
-text = "BUTON01"
-flat = true
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 1
+text = "Botão01
+"
 
 [node name="Escolha2" type="Button" parent="TabContainer/Escolhas/ButtonContainer" unique_id=2144898677]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_8u4qo")
-text = "BUTÃO 2!!!"
-flat = true
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 1
+text = "Botão02
+"
 
 [node name="Escolha3" type="Button" parent="TabContainer/Escolhas/ButtonContainer" unique_id=715813787]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxEmpty_8u4qo")
-text = "TESTE AGGGGH!!"
-flat = true
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 1
+text = "Botão03"
