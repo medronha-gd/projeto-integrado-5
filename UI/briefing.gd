@@ -16,4 +16,9 @@ func _ready() -> void:
 
 func on_pressed_button(_button: Button) -> void:
 	match _button.name:
-		pass
+		"Escolha01":
+			print("O botão 1 foi tocado..")
+		"Escolha02":
+			print("O botão 2 foi tocado..")
+		"Escolha03":
+			print("O botão 3 foi tocado..")
