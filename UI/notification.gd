@@ -1,5 +1,5 @@
 extends Control
-class_name Notification
+class_name NotificationModule # Mudei o nome pois estava conflitando com um embutido ;-;
 
 signal opened_notification
 
@@ -11,11 +11,19 @@ func aparece() -> void:
 		var t: PropertyTweener = create_tween().tween_property(%NotificationButton, "position:y",target_y, .3)
 		t.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 		#
-		%NotificationButton.show()
+		self.show()
 		
 func _ready() -> void:
+	self.hide()
+	
 	%NotificationButton.pressed.connect(_on_pressed)
 	
+	if GlobalReference.is_working == false:
+		var timer: SceneTreeTimer = get_tree().create_timer(1.6, true)
+		await timer.timeout
+		aparece()
+
+
 func _on_pressed() -> void:
 	opened_notification.emit()
 	# Conecta esse sinal no briefing
