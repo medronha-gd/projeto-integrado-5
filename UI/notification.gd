@@ -1,11 +1,13 @@
 extends Control
-class_name NotificationModule # Mudei o nome pois estava conflitando com um embutido ;-;
+class_name NotificationModule
 
 signal opened_notification
 
 
 func aparece() -> void:
 	if not GlobalReference.is_working:
+		var timer: SceneTreeTimer = get_tree().create_timer(1.6, true)
+		await timer.timeout
 		# Animação de subir, vai mudar depois pra algo mais bonitinho
 		var target_y: float = %NotificationButton.position.y - 20
 		var t: PropertyTweener = create_tween().tween_property(%NotificationButton, "position:y",target_y, .3)
@@ -17,11 +19,8 @@ func _ready() -> void:
 	self.hide()
 	
 	%NotificationButton.pressed.connect(_on_pressed)
-	
-	if GlobalReference.is_working == false:
-		var timer: SceneTreeTimer = get_tree().create_timer(1.6, true)
-		await timer.timeout
-		aparece()
+
+	aparece()
 
 
 func _on_pressed() -> void:

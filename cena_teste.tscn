@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cxa6f3i7c1e6i" path="res://UI/arquivo_texto.tscn" id="2_epxgt"]
 [ext_resource type="PackedScene" uid="uid://bj8qoc4q0nxpq" path="res://UI/notification.tscn" id="3_epxgt"]
 [ext_resource type="PackedScene" uid="uid://bqskmv7be6ykg" path="res://UI/briefing.tscn" id="4_r1n86"]
+[ext_resource type="PackedScene" uid="uid://blooottvogeod" path="res://choice_handler.tscn" id="5_c8uvx"]
 
 [node name="CenaTeste" type="Control" unique_id=349374057]
 layout_mode = 3
@@ -31,3 +32,5 @@ layout_mode = 1
 [node name="BriefingModule" parent="." unique_id=866072675 node_paths=PackedStringArray("notification_module") instance=ExtResource("4_r1n86")]
 layout_mode = 1
 notification_module = NodePath("../NotificationModule")
+
+[node name="ChoiceHandler" parent="." unique_id=1378888890 instance=ExtResource("5_c8uvx")]

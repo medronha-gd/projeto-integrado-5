@@ -22,7 +22,7 @@ config/icon="res://icon.svg"
 
 GlobalReference="*uid://6uixtc45yg54"
 UIAnimation="*uid://cawfyydj325or"
-Geral="*uid://c1l6gebyysxea"
+ChoiceManager="*uid://chsgow0ld75y8"
 
 [display]
 
