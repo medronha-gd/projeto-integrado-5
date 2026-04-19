@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cxtpj3xwudkxk"]
+
+[ext_resource type="Shader" uid="uid://cyhmuytxxlavu" path="res://overlay_shader.gdshader" id="1_1wh3i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3oqub"]
+shader = ExtResource("1_1wh3i")
+shader_parameter/resolution = Vector2(320, 240)
+shader_parameter/scan_line_amount = 0.30000001425
+shader_parameter/warp_amount = 0.05
+shader_parameter/vignette_amount = 0.5
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
+
+[node name="OverlayShader" type="CanvasLayer" unique_id=1141029881]
+layer = 2
+
+[node name="OverlayShader" type="ColorRect" parent="." unique_id=162480873]
+material = SubResource("ShaderMaterial_3oqub")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2

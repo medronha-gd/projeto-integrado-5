@@ -2,10 +2,28 @@
 
 [ext_resource type="Script" uid="uid://cobgsnemb2odo" path="res://UI/briefing.gd" id="1_scmql"]
 [ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://tema_ui.tres" id="2_ln3e5"]
+[ext_resource type="Script" uid="uid://di54yea3ltk0d" path="res://briefing_resources/dados_briefing.gd" id="3_5ajy2"]
 [ext_resource type="Resource" uid="uid://chkhaehiu1qt" path="res://briefing_resources/briefing_test.tres" id="3_scmql"]
+[ext_resource type="Texture2D" uid="uid://ccc40ekvoyvb7" path="res://icon.svg" id="6_ha2oj"]
+[ext_resource type="Resource" uid="uid://bptdxy343b4wm" path="res://text_resources/teste_de_texto_02.tres" id="7_cv4qc"]
+[ext_resource type="Texture2D" uid="uid://dcjmys6chjs51" path="res://addons/placeholder_close.png" id="8_t01vh"]
+[ext_resource type="Resource" uid="uid://b86tlt2s3sc7v" path="res://text_resources/teste_de_texto_03.tres" id="9_7obtw"]
+
+[sub_resource type="Resource" id="Resource_qmmqs"]
+script = ExtResource("3_5ajy2")
+briefing_name = "teste 02"
+texto = ExtResource("7_cv4qc")
+imagem = ExtResource("6_ha2oj")
+metadata/_custom_type_script = "uid://di54yea3ltk0d"
+
+[sub_resource type="Resource" id="Resource_n5t56"]
+script = ExtResource("3_5ajy2")
+briefing_name = "teste 03"
+texto = ExtResource("9_7obtw")
+imagem = ExtResource("8_t01vh")
+metadata/_custom_type_script = "uid://di54yea3ltk0d"
 
 [node name="BriefingModule" type="Control" unique_id=866072675]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +33,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("2_ln3e5")
 script = ExtResource("1_scmql")
-dados = ExtResource("3_scmql")
+dados = Array[ExtResource("3_5ajy2")]([ExtResource("3_scmql"), SubResource("Resource_qmmqs"), SubResource("Resource_n5t56")])
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=2107307039]
 unique_name_in_owner = true

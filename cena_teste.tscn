@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bftlfj5ql7bk1"]
 
 [ext_resource type="PackedScene" uid="uid://bkn6opq7p0ffq" path="res://UI/menu_iniciar.tscn" id="1_66nsv"]
+[ext_resource type="PackedScene" uid="uid://cxtpj3xwudkxk" path="res://overlay_shader.tscn" id="1_c8uvx"]
 [ext_resource type="PackedScene" uid="uid://cxa6f3i7c1e6i" path="res://UI/arquivo_texto.tscn" id="2_epxgt"]
 [ext_resource type="PackedScene" uid="uid://bj8qoc4q0nxpq" path="res://UI/notification.tscn" id="3_epxgt"]
 [ext_resource type="PackedScene" uid="uid://bqskmv7be6ykg" path="res://UI/briefing.tscn" id="4_r1n86"]
-[ext_resource type="PackedScene" uid="uid://blooottvogeod" path="res://choice_handler.tscn" id="5_c8uvx"]
 
 [node name="CenaTeste" type="Control" unique_id=349374057]
 layout_mode = 3
@@ -14,6 +14,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+
+[node name="OverlayShader" parent="." unique_id=1141029881 instance=ExtResource("1_c8uvx")]
 
 [node name="MenuIniciar" parent="." unique_id=1022275865 instance=ExtResource("1_66nsv")]
 layout_mode = 1
@@ -32,5 +34,3 @@ layout_mode = 1
 [node name="BriefingModule" parent="." unique_id=866072675 node_paths=PackedStringArray("notification_module") instance=ExtResource("4_r1n86")]
 layout_mode = 1
 notification_module = NodePath("../NotificationModule")
-
-[node name="ChoiceHandler" parent="." unique_id=1378888890 instance=ExtResource("5_c8uvx")]
