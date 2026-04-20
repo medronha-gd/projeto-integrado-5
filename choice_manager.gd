@@ -1,4 +1,6 @@
 extends Node
+
+
 # ---Pombo---
 var counter = 0
 var choices = {}
@@ -23,10 +25,36 @@ func save_choice(nome_briefing: String, escolha: String):
 		
 	choices[nome_briefing].append(current_choice)
 	
-	#if escolha == "verde":
 	choices_order.append(nome_briefing)
+	#
+	#print("--- Nova Ação ---")
+	#print("Última Escolha: ", last_choice)
+	#print("Escolha Atual: ", current_choice)
+	#print("Histórico Completo (Choices): ", choices)
+	
+	match current_choice["id"]: # Posso checar agora as respostas de cada jogada
+		1:
+			if current_choice["resultado"] == "Verde":
+				GlobalReference.verde_choices += 1
+			elif current_choice["resultado"] == "Azul":
+				GlobalReference.azul_choices += 1
+			elif current_choice["resultado"] == "Verde":
+				GlobalReference.verde_choices += 1
 		
-	print("--- Nova Ação ---")
-	print("Última Escolha: ", last_choice)
-	print("Escolha Atual: ", current_choice)
-	print("Histórico Completo (Choices): ", choices)
+		
+		2:
+			if current_choice["resultado"] == "Verde":
+				GlobalReference.verde_choices += 1
+			elif current_choice["resultado"] == "Azul":
+				GlobalReference.azul_choices += 1
+			elif current_choice["resultado"] == "Vermelho":
+				GlobalReference.vermelho_choices += 1
+
+
+		3:
+			if current_choice["resultado"] == "Verde":
+				GlobalReference.verde_choices += 1
+			elif current_choice["resultado"] == "Azul":
+				GlobalReference.azul_choices += 1
+			elif current_choice["resultado"] == "Vermelho":
+				GlobalReference.vermelho_choices += 1

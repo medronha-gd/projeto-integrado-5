@@ -18,6 +18,10 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/stretch_mode=4
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bbhn1p5f17hlu"
+
 [autoload]
 
 GlobalReference="*uid://6uixtc45yg54"

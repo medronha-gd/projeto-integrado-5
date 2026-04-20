@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cmbasr0necec6"]
+
+[ext_resource type="AudioStream" uid="uid://c1kf21wlrphvt" path="res://addons/Mozart-Serenade-in-G-major(chosic.com).mp3" id="1_4m5bw"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" unique_id=2035694805]
+stream = ExtResource("1_4m5bw")
+autoplay = true
+bus = &"Music"
+parameters/looping = true

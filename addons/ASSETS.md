@@ -8,3 +8,5 @@
 	Exemplo: Arma por Rafael, diponivel em pinterest.com
 	
 ---- ASSETS USADOS ----:
+	
+	Music: https://www.chosic.com/free-music/all/

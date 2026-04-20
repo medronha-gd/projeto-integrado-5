@@ -45,9 +45,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_ln3e5")
-current_tab = 0
+current_tab = 1
 
 [node name="Briefing" type="Control" parent="TabContainer" unique_id=756398031]
+visible = false
 layout_mode = 2
 mouse_filter = 1
 metadata/_tab_index = 0
@@ -100,7 +101,6 @@ offset_bottom = 500.0
 grow_horizontal = 0
 
 [node name="Escolhas" type="Control" parent="TabContainer" unique_id=870904623]
-visible = false
 layout_mode = 2
 mouse_filter = 1
 metadata/_tab_index = 1
