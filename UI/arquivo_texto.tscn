@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cxa6f3i7c1e6i"]
 
-[ext_resource type="Texture2D" uid="uid://0shu4m0g4fn0" path="res://addons/placeholder_text_icon.png" id="1_50fs5"]
 [ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://tema_ui.tres" id="1_csbg0"]
 [ext_resource type="Script" uid="uid://bm4h5ewypl7jj" path="res://UI/arquivo_texto.gd" id="2_7yy6j"]
 [ext_resource type="Resource" uid="uid://bq1j2o02i0mds" path="res://text_resources/teste_de_texto.tres" id="3_y2kn3"]
-[ext_resource type="Texture2D" uid="uid://dghxdyjfoi0qb" path="res://addons/placeholder_desktopstart_icon.png" id="4_y2kn3"]
 [ext_resource type="LabelSettings" uid="uid://dxhu1ip18d23g" path="res://new_label_settings.tres" id="5_6ncud"]
+[ext_resource type="Texture2D" uid="uid://dqhj82w7htuby" path="res://UI/x.png" id="5_csbg0"]
+[ext_resource type="Texture2D" uid="uid://dai2bquhgrpbs" path="res://UI/xfechar.png" id="5_fuo57"]
 
 [node name="ArquivoTexto" type="TextureButton" unique_id=1111402937]
 anchors_preset = 8
@@ -22,7 +22,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_csbg0")
-texture_normal = ExtResource("1_50fs5")
+texture_normal = ExtResource("5_csbg0")
 script = ExtResource("2_7yy6j")
 conteudo_textual = ExtResource("3_y2kn3")
 
@@ -55,13 +55,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -35.0
-offset_bottom = 35.0
+offset_left = -124.5
+offset_top = -2.5
+offset_right = 0.5
+offset_bottom = 122.5
 grow_horizontal = 0
 size_flags_horizontal = 4
 theme = ExtResource("1_csbg0")
-texture_normal = ExtResource("4_y2kn3")
-ignore_texture_size = true
+texture_normal = ExtResource("5_fuo57")
 
 [node name="Scroll" type="ScrollContainer" parent="PainelMestre" unique_id=1146712742]
 custom_minimum_size = Vector2(400, 400)
@@ -112,11 +113,14 @@ label_settings = ExtResource("5_6ncud")
 
 [node name="NomeArquivo" type="RichTextLabel" parent="." unique_id=368348277]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = -10.0
-offset_top = 28.0
-offset_right = 41.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.5
+offset_right = 25.5
+offset_bottom = 24.0
+grow_horizontal = 2
 theme = ExtResource("1_csbg0")
 text = "Texto"
 fit_content = true

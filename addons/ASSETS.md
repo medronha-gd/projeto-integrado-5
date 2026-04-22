@@ -10,3 +10,5 @@
 ---- ASSETS USADOS ----:
 	
 	Music: https://www.chosic.com/free-music/all/
+	
+	Music: Reverse-Time-Loop por isaiah658. Link: https://opengameart.org/content/reversing-time-stuck-in-time

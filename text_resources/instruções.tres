@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ConteudoTextual" format=3 uid="uid://cvn8g8sq40gut"]
+
+[ext_resource type="Script" uid="uid://do2h1t5dbul20" path="res://text_resources/classe_textos.gd" id="1_quhcw"]
+
+[resource]
+script = ExtResource("1_quhcw")
+textual_value = "Ótimo, mais um dia corrigindo erro dos outros.
+O gerente anterior conseguiu transformar algo simples em um problema constante. É quase impressionante.
+Então vamos acelerar: você vai pegar os comandos dessas IAs e ajustar pra elas fazerem o que devem, sem interpretação burra.
+Não tem segredo aqui. Nunca teve.
+Só não faz eu me arrepender de ainda ter alguém nessa função"
+metadata/_custom_type_script = "uid://do2h1t5dbul20"

@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cmbasr0necec6"]
 
-[ext_resource type="AudioStream" uid="uid://c1kf21wlrphvt" path="res://addons/Mozart-Serenade-in-G-major(chosic.com).mp3" id="1_4m5bw"]
+[ext_resource type="AudioStream" uid="uid://vgtppi3oqsdf" path="res://addons/Reverse-Time-Loop-isaiah658.ogg" id="1_4m5bw"]
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" unique_id=2035694805]
 stream = ExtResource("1_4m5bw")
+volume_db = -7.042
 autoplay = true
 bus = &"Music"
 parameters/looping = true
