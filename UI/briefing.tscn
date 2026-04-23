@@ -8,6 +8,8 @@
 [ext_resource type="Resource" uid="uid://bptdxy343b4wm" path="res://text_resources/teste_de_texto_02.tres" id="7_cv4qc"]
 [ext_resource type="Texture2D" uid="uid://dcjmys6chjs51" path="res://addons/placeholder_close.png" id="8_t01vh"]
 [ext_resource type="Resource" uid="uid://b86tlt2s3sc7v" path="res://text_resources/teste_de_texto_03.tres" id="9_7obtw"]
+[ext_resource type="AudioStream" uid="uid://brkiy205fvrgf" path="res://addons/CLICKclick.wav" id="9_cv4qc"]
+[ext_resource type="AudioStream" uid="uid://hux4vlwvc8fx" path="res://addons/CHANGE_TABclick_sound_2.mp3" id="10_t01vh"]
 
 [sub_resource type="Resource" id="Resource_qmmqs"]
 script = ExtResource("3_5ajy2")
@@ -149,3 +151,13 @@ size_flags_vertical = 4
 mouse_filter = 1
 theme_override_colors/font_color = Color(0, 8.891243, 18.892157, 1)
 text = "Azul"
+
+[node name="ClickEffect" type="AudioStreamPlayer" parent="." unique_id=1105976633]
+unique_name_in_owner = true
+stream = ExtResource("9_cv4qc")
+bus = &"Effects"
+
+[node name="ChangeEffect" type="AudioStreamPlayer" parent="." unique_id=1111535056]
+unique_name_in_owner = true
+stream = ExtResource("10_t01vh")
+bus = &"Effects"

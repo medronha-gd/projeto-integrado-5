@@ -6,6 +6,8 @@
 [ext_resource type="LabelSettings" uid="uid://dxhu1ip18d23g" path="res://new_label_settings.tres" id="5_6ncud"]
 [ext_resource type="Texture2D" uid="uid://dqhj82w7htuby" path="res://UI/x.png" id="5_csbg0"]
 [ext_resource type="Texture2D" uid="uid://dai2bquhgrpbs" path="res://UI/xfechar.png" id="5_fuo57"]
+[ext_resource type="AudioStream" uid="uid://bmw1nypktiud3" path="res://addons/OPENclick_sound_1.mp3" id="7_fuo57"]
+[ext_resource type="AudioStream" uid="uid://cip6clv3b57wn" path="res://addons/CLOSEMenu Selection Click.wav" id="8_6oe31"]
 
 [node name="ArquivoTexto" type="TextureButton" unique_id=1111402937]
 anchors_preset = 8
@@ -114,20 +116,28 @@ label_settings = ExtResource("5_6ncud")
 [node name="NomeArquivo" type="RichTextLabel" parent="." unique_id=368348277]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -25.5
-offset_right = 25.5
-offset_bottom = 24.0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -24.0
 grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("1_csbg0")
 text = "Texto"
 fit_content = true
 scroll_active = false
-horizontal_alignment = 1
-vertical_alignment = 1
 language = "pt-BR"
+
+[node name="OpenEffect" type="AudioStreamPlayer" parent="." unique_id=240865854]
+unique_name_in_owner = true
+stream = ExtResource("7_fuo57")
+bus = &"Effects"
+
+[node name="CloseEffect" type="AudioStreamPlayer" parent="." unique_id=1589080102]
+unique_name_in_owner = true
+stream = ExtResource("8_6oe31")
+bus = &"Effects"
 
 [connection signal="pressed" from="." to="." method="arquivo_on_pressed"]
 [connection signal="pressed" from="PainelMestre/Fechar" to="." method="_on_fechar_pressed"]

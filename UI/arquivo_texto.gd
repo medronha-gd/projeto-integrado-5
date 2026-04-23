@@ -16,6 +16,7 @@ func _ready() -> void:
 	%PainelMestre.visible = false
 
 func arquivo_on_pressed() -> void:
+	%OpenEffect.play()
 	if %PainelMestre.visible:
 		%PainelMestre.visible = false
 	else:
@@ -25,6 +26,7 @@ func arquivo_on_pressed() -> void:
 
 
 func _on_fechar_pressed() -> void:
+	%CloseEffect.play()
 	if %PainelMestre.visible:
 		%PainelMestre.visible = false
 

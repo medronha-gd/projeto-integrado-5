@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bqskmv7be6ykg" path="res://UI/briefing.tscn" id="4_r1n86"]
 [ext_resource type="PackedScene" uid="uid://cmbasr0necec6" path="res://background_music.tscn" id="6_v7a43"]
 [ext_resource type="Script" uid="uid://b6xqq10jm8snj" path="res://avaliador_final.gd" id="7_yn1xw"]
+[ext_resource type="PackedScene" uid="uid://dt14xlsublpyq" path="res://back_ground.tscn" id="10_gbtns"]
 
 [node name="CenaTeste" type="Control" unique_id=349374057]
 layout_mode = 3
@@ -48,4 +49,7 @@ script = ExtResource("7_yn1xw")
 briefing = NodePath("../BriefingModule")
 
 [node name="FadeComponent" parent="." unique_id=485761289 instance=ExtResource("1_y1cof")]
+layout_mode = 1
+
+[node name="BackGround" parent="." unique_id=557328091 instance=ExtResource("10_gbtns")]
 layout_mode = 1

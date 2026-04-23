@@ -17,10 +17,12 @@ func pressed_btn(_button: Button):
 
 
 func _on_menu_button_pressed() -> void:
-	if %PainelCentral.visible:
-		%PainelCentral.visible = false
+	%MenuSound.play()
+	
+	if not %PainelCentral.visible:
+		%PainelCentral.show()
 	else:
-		%PainelCentral.visible = true
+		%PainelCentral.hide()
 
 
 

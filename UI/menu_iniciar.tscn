@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://don3jr4x7p747" path="res://addons/placeholder_Exit.png" id="3_ok8u4"]
 [ext_resource type="Texture2D" uid="uid://4ht6ghfw3cha" path="res://addons/placeholder_Power - Restart.png" id="4_6m1ds"]
 [ext_resource type="Texture2D" uid="uid://bqc5btp3v7sdj" path="res://addons/square-dashed-rounded-128.png" id="4_aex7n"]
+[ext_resource type="AudioStream" uid="uid://bmw1nypktiud3" path="res://addons/OPENclick_sound_1.mp3" id="7_43p5f"]
 
 [sub_resource type="Gradient" id="Gradient_uxc8s"]
 offsets = PackedFloat32Array(0.0022727272, 1)
@@ -134,5 +135,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="." unique_id=509324490]
+unique_name_in_owner = true
+stream = ExtResource("7_43p5f")
 
 [connection signal="pressed" from="CanvasLayer/Caixa/RoundedBoxMask/MenuButton" to="." method="_on_menu_button_pressed"]

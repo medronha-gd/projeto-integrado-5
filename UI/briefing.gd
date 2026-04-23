@@ -17,6 +17,7 @@ var dado_atual: DadosBriefing
 
 func _ready() -> void:
 	%TabContainer.current_tab = 0
+	%TabContainer.tab_changed.connect(change_sound_effect)
 	_atualizar_dado(0)
 	self.hide()
 	
@@ -43,6 +44,7 @@ func open_briefing() -> void:
 	%TabContainer.current_tab = 0
 
 func on_pressed_button(_button: Button) -> void:
+	%ClickEffect.play()
 	var button_name: String = _button.name
 	
 	ChoiceManager.save_choice(briefing_name, button_name)
@@ -60,3 +62,6 @@ func on_pressed_button(_button: Button) -> void:
 		
 	if notification_module != null:
 		notification_module.aparece()
+
+func change_sound_effect() -> void:
+	%ChangeEffect.play()
