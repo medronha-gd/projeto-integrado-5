@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://boijhe81fasnj"]
 
-[ext_resource type="Script" uid="uid://c2ob6kawmqj6x" path="res://fade_component.gd" id="1_j1ebl"]
+[ext_resource type="Script" uid="uid://c2ob6kawmqj6x" path="res://entidades/fade_component.gd" id="1_j1ebl"]
 
 [sub_resource type="Animation" id="Animation_832oe"]
 length = 0.001

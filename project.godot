@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Projeto Integrado 5"
 config/tags=PackedStringArray("projetointegrado5", "ufpel")
+run/main_scene="uid://bftlfj5ql7bk1"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 run/max_fps=120
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -47,6 +48,7 @@ enabled=PackedStringArray("res://addons/godot_ui_animations/plugin.cfg")
 folder_colors={
 "res://UI/": "green",
 "res://addons/": "pink",
+"res://entidades/": "teal",
 "res://text_resources/": "yellow"
 }
 

@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cxa6f3i7c1e6i"]
 
-[ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://tema_ui.tres" id="1_csbg0"]
+[ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://recursos_tres/tema_ui.tres" id="1_csbg0"]
 [ext_resource type="Script" uid="uid://bm4h5ewypl7jj" path="res://UI/arquivo_texto.gd" id="2_7yy6j"]
 [ext_resource type="Resource" uid="uid://bq1j2o02i0mds" path="res://text_resources/teste_de_texto.tres" id="3_y2kn3"]
-[ext_resource type="LabelSettings" uid="uid://dxhu1ip18d23g" path="res://new_label_settings.tres" id="5_6ncud"]
-[ext_resource type="Texture2D" uid="uid://dqhj82w7htuby" path="res://UI/x.png" id="5_csbg0"]
-[ext_resource type="Texture2D" uid="uid://dai2bquhgrpbs" path="res://UI/xfechar.png" id="5_fuo57"]
+[ext_resource type="LabelSettings" uid="uid://dxhu1ip18d23g" path="res://recursos_tres/new_label_settings.tres" id="5_6ncud"]
+[ext_resource type="Texture2D" uid="uid://bii23uu2eq55u" path="res://UI/XClose.png" id="5_6oe31"]
+[ext_resource type="Texture2D" uid="uid://dqhj82w7htuby" path="res://UI/text_file_icon.png" id="5_csbg0"]
+[ext_resource type="StyleBox" uid="uid://cfibh8kanpfkd" path="res://recursos_tres/fundo_setting.tres" id="5_vuqw5"]
 [ext_resource type="AudioStream" uid="uid://bmw1nypktiud3" path="res://addons/OPENclick_sound_1.mp3" id="7_fuo57"]
+[ext_resource type="StyleBox" uid="uid://dhlu7rbf6m1cu" path="res://recursos_tres/borda_superior.tres" id="7_gajnc"]
 [ext_resource type="AudioStream" uid="uid://cip6clv3b57wn" path="res://addons/CLOSEMenu Selection Click.wav" id="8_6oe31"]
 
 [node name="ArquivoTexto" type="TextureButton" unique_id=1111402937]
@@ -30,6 +32,7 @@ conteudo_textual = ExtResource("3_y2kn3")
 
 [node name="PainelMestre" type="Control" parent="." unique_id=461788608]
 unique_name_in_owner = true
+visible = false
 z_index = 1
 custom_minimum_size = Vector2(600, 500)
 anchors_preset = 0
@@ -40,7 +43,6 @@ theme = ExtResource("1_csbg0")
 
 [node name="Fundo" type="PanelContainer" parent="PainelMestre" unique_id=1327513871]
 unique_name_in_owner = true
-z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,22 +51,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("1_csbg0")
+theme_override_styles/panel = ExtResource("5_vuqw5")
 
-[node name="Fechar" type="TextureButton" parent="PainelMestre" unique_id=1986420758]
+[node name="Fechar" type="Button" parent="PainelMestre" unique_id=845258989]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(35, 35)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -124.5
-offset_top = -2.5
-offset_right = 0.5
-offset_bottom = 122.5
+offset_left = -35.0
+offset_bottom = 35.0
 grow_horizontal = 0
 size_flags_horizontal = 4
 theme = ExtResource("1_csbg0")
-texture_normal = ExtResource("5_fuo57")
+icon = ExtResource("5_6oe31")
+flat = true
 
 [node name="Scroll" type="ScrollContainer" parent="PainelMestre" unique_id=1146712742]
 custom_minimum_size = Vector2(400, 400)
@@ -97,14 +99,23 @@ fit_content = true
 shortcut_keys_enabled = false
 vertical_alignment = 1
 
-[node name="CaixaDeTitulo" type="VBoxContainer" parent="PainelMestre" unique_id=699018575]
+[node name="Panel" type="Panel" parent="PainelMestre" unique_id=356075994]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 38.5
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("7_gajnc")
+
+[node name="CaixaDeTitulo" type="VBoxContainer" parent="PainelMestre/Panel" unique_id=699018575]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 1
 offset_right = 45.0
 offset_bottom = 23.0
 theme = ExtResource("1_csbg0")
 
-[node name="TituloArquivo" type="Label" parent="PainelMestre/CaixaDeTitulo" unique_id=894160347]
+[node name="TituloArquivo" type="Label" parent="PainelMestre/Panel/CaixaDeTitulo" unique_id=894160347]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -116,17 +127,21 @@ label_settings = ExtResource("5_6ncud")
 [node name="NomeArquivo" type="RichTextLabel" parent="." unique_id=368348277]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = -1
+anchor_left = -0.52400005
 anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -24.0
+anchor_right = 2.0400002
+anchor_bottom = 1.44
+offset_left = -4.7999973
+offset_top = -2.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_csbg0")
 text = "Texto"
 fit_content = true
 scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 language = "pt-BR"
 
 [node name="OpenEffect" type="AudioStreamPlayer" parent="." unique_id=240865854]

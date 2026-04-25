@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jymxecgqsg5f" path="res://UI/notification.gd" id="1_pfrp7"]
 [ext_resource type="Texture2D" uid="uid://wr6q28cq16jm" path="res://addons/placeholder_Notification.png" id="2_3w3rg"]
+[ext_resource type="AudioStream" uid="uid://bmw1nypktiud3" path="res://addons/OPENclick_sound_1.mp3" id="3_2385i"]
 
 [node name="NotificationModule" type="Control" unique_id=1584922438]
 visible = false
@@ -31,3 +32,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 texture_normal = ExtResource("2_3w3rg")
+
+[node name="OpenEffect" type="AudioStreamPlayer" parent="." unique_id=748978758]
+unique_name_in_owner = true
+stream = ExtResource("3_2385i")
+
+[node name="AppearEffect" type="AudioStreamPlayer" parent="." unique_id=958596572]
+unique_name_in_owner = true

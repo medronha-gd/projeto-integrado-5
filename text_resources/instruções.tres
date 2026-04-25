@@ -4,9 +4,16 @@
 
 [resource]
 script = ExtResource("1_quhcw")
-textual_value = "Ótimo, mais um dia corrigindo erro dos outros.
-O gerente anterior conseguiu transformar algo simples em um problema constante. É quase impressionante.
-Então vamos acelerar: você vai pegar os comandos dessas IAs e ajustar pra elas fazerem o que devem, sem interpretação burra.
-Não tem segredo aqui. Nunca teve.
-Só não faz eu me arrepender de ainda ter alguém nessa função"
+textual_value = "—---------------------------------------------------------------------
+
+De: Alexandre Responsável Geral
+Para: Você
+
+Bem vindo ao grupo Eviltec, seu dever como Gerente de IA é instruir nossa
+inteligência artificial, a Vulcanic, para que ela realize suas tarefas. Durante seu horário de
+serviço você deve permanecer em seu posto, caso saia sem permissão haverá penalidades
+as quais incluem redução de salário e horas extras. Lembre-se, você será responsabilizado
+judicialmente por qualquer dano causado pela IA durante o seu expediente.
+
+Atenciosamente, Grupo Eviltec"
 metadata/_custom_type_script = "uid://do2h1t5dbul20"

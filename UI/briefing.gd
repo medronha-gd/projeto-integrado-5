@@ -17,6 +17,7 @@ var dado_atual: DadosBriefing
 
 func _ready() -> void:
 	%TabContainer.current_tab = 0
+	%TabContainer.tab_clicked.connect(change_sound_effect)
 	%TabContainer.tab_changed.connect(change_sound_effect)
 	_atualizar_dado(0)
 	self.hide()
@@ -63,5 +64,5 @@ func on_pressed_button(_button: Button) -> void:
 	if notification_module != null:
 		notification_module.aparece()
 
-func change_sound_effect() -> void:
+func change_sound_effect(_tab: int) -> void:
 	%ChangeEffect.play()

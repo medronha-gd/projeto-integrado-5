@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://bkn6opq7p0ffq" path="res://UI/menu_iniciar.tscn" id="1_66nsv"]
 [ext_resource type="PackedScene" uid="uid://cxtpj3xwudkxk" path="res://overlay_shader.tscn" id="1_c8uvx"]
-[ext_resource type="PackedScene" uid="uid://boijhe81fasnj" path="res://fade_component.tscn" id="1_y1cof"]
+[ext_resource type="PackedScene" uid="uid://boijhe81fasnj" path="res://entidades/fade_component.tscn" id="1_y1cof"]
 [ext_resource type="PackedScene" uid="uid://cxa6f3i7c1e6i" path="res://UI/arquivo_texto.tscn" id="2_epxgt"]
 [ext_resource type="PackedScene" uid="uid://bj8qoc4q0nxpq" path="res://UI/notification.tscn" id="3_epxgt"]
 [ext_resource type="Resource" uid="uid://cvn8g8sq40gut" path="res://text_resources/instruções.tres" id="4_hc7gj"]
 [ext_resource type="PackedScene" uid="uid://bqskmv7be6ykg" path="res://UI/briefing.tscn" id="4_r1n86"]
 [ext_resource type="PackedScene" uid="uid://cmbasr0necec6" path="res://background_music.tscn" id="6_v7a43"]
-[ext_resource type="Script" uid="uid://b6xqq10jm8snj" path="res://avaliador_final.gd" id="7_yn1xw"]
-[ext_resource type="PackedScene" uid="uid://dt14xlsublpyq" path="res://back_ground.tscn" id="10_gbtns"]
+[ext_resource type="Script" uid="uid://b6xqq10jm8snj" path="res://entidades/avaliador_final.gd" id="7_yn1xw"]
+[ext_resource type="PackedScene" uid="uid://dt14xlsublpyq" path="res://UI/back_ground.tscn" id="10_gbtns"]
 
 [node name="CenaTeste" type="Control" unique_id=349374057]
 layout_mode = 3

@@ -6,11 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://don3jr4x7p747" path="res://addons/placeholder_Exit.png" id="3_ok8u4"]
 [ext_resource type="Texture2D" uid="uid://4ht6ghfw3cha" path="res://addons/placeholder_Power - Restart.png" id="4_6m1ds"]
 [ext_resource type="Texture2D" uid="uid://bqc5btp3v7sdj" path="res://addons/square-dashed-rounded-128.png" id="4_aex7n"]
+[ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://recursos_tres/tema_ui.tres" id="5_7bvwa"]
+[ext_resource type="FontFile" uid="uid://y5fj4xdxg38" path="res://addons/Jupiteroid-Bold.ttf" id="5_c3e4e"]
+[ext_resource type="FontFile" uid="uid://cu13nrlmn0uom" path="res://addons/Jupiteroid-Regular.ttf" id="5_dhfuw"]
+[ext_resource type="StyleBox" uid="uid://dhlu7rbf6m1cu" path="res://recursos_tres/borda_superior.tres" id="6_tlbwi"]
 [ext_resource type="AudioStream" uid="uid://bmw1nypktiud3" path="res://addons/OPENclick_sound_1.mp3" id="7_43p5f"]
+[ext_resource type="StyleBox" uid="uid://cfibh8kanpfkd" path="res://recursos_tres/fundo_setting.tres" id="8_tlbwi"]
 
 [sub_resource type="Gradient" id="Gradient_uxc8s"]
 offsets = PackedFloat32Array(0.0022727272, 1)
-colors = PackedColorArray(0, 0, 0.9376289, 1, 0.05882353, 0, 0.29411766, 1)
+colors = PackedColorArray(1, 0, 0, 1, 0.28235295, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_r6l6s"]
 gradient = SubResource("Gradient_uxc8s")
@@ -45,6 +50,7 @@ offset_right = 64.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
+theme_override_constants/separation = 4
 
 [node name="RoundedBoxMask" type="TextureRect" parent="CanvasLayer/Caixa" unique_id=663637084]
 clip_children = 2
@@ -76,7 +82,7 @@ scale = Vector2(1.2226423, 1.2159072)
 texture = ExtResource("4_aex7n")
 region_rect = Rect2(49, 112, 30, 16)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=665101415]
+[node name="BarraTarefas" type="TextureRect" parent="CanvasLayer" unique_id=665101415]
 custom_minimum_size = Vector2(1920, 106)
 anchors_preset = -1
 anchor_top = 0.90200007
@@ -86,6 +92,34 @@ offset_right = 1920.0
 grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("GradientTexture2D_r6l6s")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/BarraTarefas" unique_id=1896360967]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 1
+
+[node name="HorasMinutos" type="Label" parent="CanvasLayer/BarraTarefas/VBoxContainer" unique_id=394158407]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_dhfuw")
+theme_override_font_sizes/font_size = 20
+text = "23: 00"
+
+[node name="DiaMesAno" type="Label" parent="CanvasLayer/BarraTarefas/VBoxContainer" unique_id=1256233193]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_c3e4e")
+theme_override_font_sizes/font_size = 20
+text = "18/05/2003"
+vertical_alignment = 1
 
 [node name="PainelCentral" type="Control" parent="CanvasLayer" unique_id=1380889977]
 unique_name_in_owner = true
@@ -114,17 +148,19 @@ mouse_filter = 2
 [node name="Quit" type="Button" parent="CanvasLayer/PainelCentral/ButtonHolder" unique_id=2098561695]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("5_7bvwa")
+theme_override_styles/normal = ExtResource("6_tlbwi")
 text = "Desligar
 "
 icon = ExtResource("3_ok8u4")
-flat = true
 
 [node name="Restart" type="Button" parent="CanvasLayer/PainelCentral/ButtonHolder" unique_id=7131515]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("5_7bvwa")
+theme_override_styles/normal = ExtResource("6_tlbwi")
 text = "Restart"
 icon = ExtResource("4_6m1ds")
-flat = true
 
 [node name="Fundo" type="Panel" parent="CanvasLayer/PainelCentral" unique_id=1081593535]
 z_index = -2
@@ -135,6 +171,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_styles/panel = ExtResource("8_tlbwi")
 
 [node name="MenuSound" type="AudioStreamPlayer" parent="." unique_id=509324490]
 unique_name_in_owner = true
