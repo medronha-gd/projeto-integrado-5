@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dghxdyjfoi0qb"
-path="res://.godot/imported/placeholder_desktopstart_icon.png-b0a6087fb63012e72192e7733661e6ee.ctex"
+uid="uid://tfrt0oxhmcx"
+path="res://.godot/imported/NotificationIcon.png-2e285b805f8e5727474d456431d163ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/placeholder_desktopstart_icon.png"
-dest_files=["res://.godot/imported/placeholder_desktopstart_icon.png-b0a6087fb63012e72192e7733661e6ee.ctex"]
+source_file="res://UI/NotificationIcon.png"
+dest_files=["res://.godot/imported/NotificationIcon.png-2e285b805f8e5727474d456431d163ea.ctex"]
 
 [params]
 

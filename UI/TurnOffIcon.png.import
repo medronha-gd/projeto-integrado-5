@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcjmys6chjs51"
-path="res://.godot/imported/placeholder_close.png-43ce615efef69c950189be2a4f8bf347.ctex"
+uid="uid://nra6kmvcfo5r"
+path="res://.godot/imported/TurnOffIcon.png-96f3c281a07a9f1e323fd44be59b8c62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/placeholder_close.png"
-dest_files=["res://.godot/imported/placeholder_close.png-43ce615efef69c950189be2a4f8bf347.ctex"]
+source_file="res://UI/TurnOffIcon.png"
+dest_files=["res://.godot/imported/TurnOffIcon.png-96f3c281a07a9f1e323fd44be59b8c62.ctex"]
 
 [params]
 

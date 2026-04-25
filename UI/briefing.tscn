@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://chkhaehiu1qt" path="res://briefing_resources/briefing_test.tres" id="3_scmql"]
 [ext_resource type="Texture2D" uid="uid://ccc40ekvoyvb7" path="res://icon.svg" id="6_ha2oj"]
 [ext_resource type="Resource" uid="uid://bptdxy343b4wm" path="res://text_resources/teste_de_texto_02.tres" id="7_cv4qc"]
-[ext_resource type="Texture2D" uid="uid://dcjmys6chjs51" path="res://addons/placeholder_close.png" id="8_t01vh"]
 [ext_resource type="Resource" uid="uid://b86tlt2s3sc7v" path="res://text_resources/teste_de_texto_03.tres" id="9_7obtw"]
 [ext_resource type="AudioStream" uid="uid://brkiy205fvrgf" path="res://addons/CLICKclick.wav" id="9_cv4qc"]
 [ext_resource type="StyleBox" uid="uid://cfibh8kanpfkd" path="res://recursos_tres/fundo_setting.tres" id="9_qmmqs"]
@@ -20,11 +19,14 @@ texto = ExtResource("7_cv4qc")
 imagem = ExtResource("6_ha2oj")
 metadata/_custom_type_script = "uid://di54yea3ltk0d"
 
+[sub_resource type="Resource" id="Resource_t01vh"]
+metadata/__load_path__ = "res://addons/placeholder_close.png"
+
 [sub_resource type="Resource" id="Resource_n5t56"]
 script = ExtResource("3_5ajy2")
 briefing_name = "teste 03"
 texto = ExtResource("9_7obtw")
-imagem = ExtResource("8_t01vh")
+imagem = SubResource("Resource_t01vh")
 metadata/_custom_type_script = "uid://di54yea3ltk0d"
 
 [node name="BriefingModule" type="Control" unique_id=866072675]

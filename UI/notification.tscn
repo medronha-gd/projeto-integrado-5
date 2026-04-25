@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bj8qoc4q0nxpq"]
 
 [ext_resource type="Script" uid="uid://jymxecgqsg5f" path="res://UI/notification.gd" id="1_pfrp7"]
-[ext_resource type="Texture2D" uid="uid://wr6q28cq16jm" path="res://addons/placeholder_Notification.png" id="2_3w3rg"]
+[ext_resource type="Texture2D" uid="uid://tfrt0oxhmcx" path="res://UI/NotificationIcon.png" id="2_h6g7a"]
 [ext_resource type="AudioStream" uid="uid://bmw1nypktiud3" path="res://addons/OPENclick_sound_1.mp3" id="3_2385i"]
+[ext_resource type="AudioStream" uid="uid://ubwfh54k6xx1" path="res://addons/NOTIFICATION#7.wav" id="4_h6g7a"]
 
 [node name="NotificationModule" type="Control" unique_id=1584922438]
-visible = false
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 3
 anchors_preset = 3
@@ -23,15 +23,18 @@ script = ExtResource("1_pfrp7")
 [node name="NotificationButton" type="TextureButton" parent="." unique_id=1624922834]
 unique_name_in_owner = true
 texture_filter = 1
-custom_minimum_size = Vector2(200, 200)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 50.0
 grow_horizontal = 2
-grow_vertical = 2
 mouse_filter = 1
-texture_normal = ExtResource("2_3w3rg")
+texture_normal = ExtResource("2_h6g7a")
+stretch_mode = 0
 
 [node name="OpenEffect" type="AudioStreamPlayer" parent="." unique_id=748978758]
 unique_name_in_owner = true
@@ -39,3 +42,5 @@ stream = ExtResource("3_2385i")
 
 [node name="AppearEffect" type="AudioStreamPlayer" parent="." unique_id=958596572]
 unique_name_in_owner = true
+stream = ExtResource("4_h6g7a")
+bus = &"Effects"

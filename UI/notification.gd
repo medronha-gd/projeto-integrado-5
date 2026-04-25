@@ -15,6 +15,7 @@ func aparece() -> void:
 		t.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_SINE)
 		#
 		self.show()
+		%AppearEffect.play()
 		
 func _ready() -> void:
 	self.hide()

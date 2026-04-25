@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://cnod5vksv31w5" path="res://UI/menu_iniciar.gd" id="1_uxc8s"]
 [ext_resource type="Texture2D" uid="uid://c5trmyvpejtd7" path="res://addons/square-rounded-128.png" id="2_6m1ds"]
 [ext_resource type="Texture2D" uid="uid://ckb7oxpdhctab" path="res://UI/logonova.png" id="3_aex7n"]
-[ext_resource type="Texture2D" uid="uid://don3jr4x7p747" path="res://addons/placeholder_Exit.png" id="3_ok8u4"]
-[ext_resource type="Texture2D" uid="uid://4ht6ghfw3cha" path="res://addons/placeholder_Power - Restart.png" id="4_6m1ds"]
 [ext_resource type="Texture2D" uid="uid://bqc5btp3v7sdj" path="res://addons/square-dashed-rounded-128.png" id="4_aex7n"]
 [ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://recursos_tres/tema_ui.tres" id="5_7bvwa"]
 [ext_resource type="FontFile" uid="uid://y5fj4xdxg38" path="res://addons/Jupiteroid-Bold.ttf" id="5_c3e4e"]
@@ -12,6 +10,8 @@
 [ext_resource type="StyleBox" uid="uid://dhlu7rbf6m1cu" path="res://recursos_tres/borda_superior.tres" id="6_tlbwi"]
 [ext_resource type="AudioStream" uid="uid://bmw1nypktiud3" path="res://addons/OPENclick_sound_1.mp3" id="7_43p5f"]
 [ext_resource type="StyleBox" uid="uid://cfibh8kanpfkd" path="res://recursos_tres/fundo_setting.tres" id="8_tlbwi"]
+[ext_resource type="Texture2D" uid="uid://nra6kmvcfo5r" path="res://UI/TurnOffIcon.png" id="9_dhfuw"]
+[ext_resource type="Texture2D" uid="uid://lejivwlmvqcs" path="res://UI/RestartButton.png" id="10_7qnmd"]
 
 [sub_resource type="Gradient" id="Gradient_uxc8s"]
 offsets = PackedFloat32Array(0.0022727272, 1)
@@ -152,7 +152,7 @@ theme = ExtResource("5_7bvwa")
 theme_override_styles/normal = ExtResource("6_tlbwi")
 text = "Desligar
 "
-icon = ExtResource("3_ok8u4")
+icon = ExtResource("9_dhfuw")
 
 [node name="Restart" type="Button" parent="CanvasLayer/PainelCentral/ButtonHolder" unique_id=7131515]
 unique_name_in_owner = true
@@ -160,7 +160,7 @@ layout_mode = 2
 theme = ExtResource("5_7bvwa")
 theme_override_styles/normal = ExtResource("6_tlbwi")
 text = "Restart"
-icon = ExtResource("4_6m1ds")
+icon = ExtResource("10_7qnmd")
 
 [node name="Fundo" type="Panel" parent="CanvasLayer/PainelCentral" unique_id=1081593535]
 z_index = -2
