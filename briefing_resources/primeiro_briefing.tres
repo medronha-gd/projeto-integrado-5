@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="DadosBriefing" format=3 uid="uid://by5emp8shj3s7"]
+
+[ext_resource type="Script" uid="uid://di54yea3ltk0d" path="res://briefing_resources/dados_briefing.gd" id="1_ll18b"]
+[ext_resource type="Script" uid="uid://do2h1t5dbul20" path="res://text_resources/classe_textos.gd" id="2_iasqc"]
+
+[sub_resource type="Resource" id="Resource_u35ne"]
+script = ExtResource("2_iasqc")
+textual_value = "[color=yellow]Situação:[/color] A produção caiu devido à falta de trabalhadores humanos. Robôs
+podem ser utilizados para compensar.
+
+[color=orange]Vulcanic -[/color] Olá senhor, pelos meus cálculos a produção está caindo graças a falta
+de mão de obra, devemos tomar providências para bater a meta semanal. O que
+sugere que seja feito?"
+metadata/_custom_type_script = "uid://do2h1t5dbul20"
+
+[resource]
+script = ExtResource("1_ll18b")
+briefing_name = "Escassez de mão de obra"
+texto = SubResource("Resource_u35ne")
+"verde_descrição" = "[color=green]Aumentar a carga de trabalho dos robôs atuais com ciclos contínuos[/color]"
+"vermelho_descrição" = "[color=red]Permitir que robôs produzam novas unidades autonomamente[/color]"
+"azul_descrição" = "[color=blue]Redistribuir tarefas entre humanos e robôs existentes, mantendo limites operacionais[/color]"
+metadata/_custom_type_script = "uid://di54yea3ltk0d"

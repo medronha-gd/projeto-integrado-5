@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://cobgsnemb2odo" path="res://UI/briefing.gd" id="1_scmql"]
 [ext_resource type="Theme" uid="uid://b0kt1nwyk05wm" path="res://recursos_tres/tema_ui.tres" id="2_ln3e5"]
 [ext_resource type="Script" uid="uid://di54yea3ltk0d" path="res://briefing_resources/dados_briefing.gd" id="3_5ajy2"]
-[ext_resource type="Resource" uid="uid://chkhaehiu1qt" path="res://briefing_resources/briefing_test.tres" id="3_scmql"]
+[ext_resource type="Texture2D" uid="uid://bo5ssmxe0fnck" path="res://addons/placeholder_imagem.png" id="4_7obtw"]
+[ext_resource type="Resource" uid="uid://bq1j2o02i0mds" path="res://text_resources/teste_de_texto.tres" id="5_qmmqs"]
 [ext_resource type="Texture2D" uid="uid://ccc40ekvoyvb7" path="res://icon.svg" id="6_ha2oj"]
 [ext_resource type="Resource" uid="uid://bptdxy343b4wm" path="res://text_resources/teste_de_texto_02.tres" id="7_cv4qc"]
 [ext_resource type="Resource" uid="uid://b86tlt2s3sc7v" path="res://text_resources/teste_de_texto_03.tres" id="9_7obtw"]
@@ -11,6 +12,13 @@
 [ext_resource type="StyleBox" uid="uid://cfibh8kanpfkd" path="res://recursos_tres/fundo_setting.tres" id="9_qmmqs"]
 [ext_resource type="StyleBox" uid="uid://dhlu7rbf6m1cu" path="res://recursos_tres/borda_superior.tres" id="10_n5t56"]
 [ext_resource type="AudioStream" uid="uid://hux4vlwvc8fx" path="res://addons/CHANGE_TABclick_sound_2.mp3" id="10_t01vh"]
+
+[sub_resource type="Resource" id="Resource_csdo3"]
+script = ExtResource("3_5ajy2")
+briefing_name = "teste"
+texto = ExtResource("5_qmmqs")
+imagem = ExtResource("4_7obtw")
+metadata/_custom_type_script = "uid://di54yea3ltk0d"
 
 [sub_resource type="Resource" id="Resource_qmmqs"]
 script = ExtResource("3_5ajy2")
@@ -39,7 +47,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme = ExtResource("2_ln3e5")
 script = ExtResource("1_scmql")
-dados = Array[ExtResource("3_5ajy2")]([ExtResource("3_scmql"), SubResource("Resource_qmmqs"), SubResource("Resource_n5t56")])
+dados = Array[ExtResource("3_5ajy2")]([SubResource("Resource_csdo3"), SubResource("Resource_qmmqs"), SubResource("Resource_n5t56")])
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=2107307039]
 unique_name_in_owner = true
@@ -157,6 +165,79 @@ size_flags_vertical = 4
 mouse_filter = 1
 theme_override_colors/font_color = Color(0, 8.891243, 18.892157, 1)
 text = "Azul"
+
+[node name="Descricoes" type="Control" parent="TabContainer/Escolhas" unique_id=174724829]
+layout_mode = 1
+anchor_left = 0.15900001
+anchor_top = 0.5
+anchor_right = 0.864
+anchor_bottom = 0.99700004
+offset_left = -0.64401245
+offset_top = 30.0
+offset_right = -0.42407227
+offset_bottom = -102.880005
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VerdeScroll" type="ScrollContainer" parent="TabContainer/Escolhas/Descricoes" unique_id=448610149]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.59000003
+anchor_bottom = 1.2080001
+offset_top = -12.0
+offset_right = -591.09
+offset_bottom = 0.12799072
+grow_vertical = 2
+
+[node name="DescriçãoVerde" type="RichTextLabel" parent="TabContainer/Escolhas/Descricoes/VerdeScroll" unique_id=1536650955]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Texto"
+
+[node name="VermelhoScroll" type="ScrollContainer" parent="TabContainer/Escolhas/Descricoes" unique_id=295108209]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.59000003
+anchor_bottom = 1.2080001
+offset_left = 463.0
+offset_top = -12.0
+offset_right = 82.90997
+offset_bottom = 0.12799072
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DescriçãoVermelho" type="RichTextLabel" parent="TabContainer/Escolhas/Descricoes/VermelhoScroll" unique_id=1242864180]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Texto"
+
+[node name="AzulScroll" type="ScrollContainer" parent="TabContainer/Escolhas/Descricoes" unique_id=179143655]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.59000003
+anchor_bottom = 1.2080001
+offset_left = 918.0
+offset_top = -12.0
+offset_right = 638.91
+offset_bottom = 0.12799072
+grow_vertical = 2
+
+[node name="DescriçãoAzul" type="RichTextLabel" parent="TabContainer/Escolhas/Descricoes/AzulScroll" unique_id=755585389]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Texto"
 
 [node name="ClickEffect" type="AudioStreamPlayer" parent="." unique_id=1105976633]
 unique_name_in_owner = true

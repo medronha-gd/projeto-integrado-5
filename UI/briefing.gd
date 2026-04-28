@@ -8,6 +8,10 @@ var briefing_name: String
 var texto: ConteudoTextual
 var imagem: CompressedTexture2D
 
+var desc_verde
+var desc_vermelho
+var desc_azul
+
 @export var dados: Array[DadosBriefing]
 var dado_atual: DadosBriefing
 
@@ -35,11 +39,21 @@ func _atualizar_dado(index: int) -> void:
 	texto = dado_atual.texto
 	imagem = dado_atual.imagem
 	
+	desc_verde = dado_atual.verde_descrição
+	desc_vermelho = dado_atual.vermelho_descrição
+	desc_azul = dado_atual.azul_descrição
+	
 	if imagem != null:
 		%ImagemDoBriefing.texture = imagem
 	if texto != null:
 		%TextoBriefing.text = texto.textual_value
-
+	
+	if desc_verde != null:
+		%"DescriçãoVerde".text = desc_verde
+	if desc_vermelho != null:
+		%"DescriçãoVermelho".text = desc_vermelho
+	if desc_azul != null:
+		%"DescriçãoAzul".text = desc_azul
 func open_briefing() -> void:
 	self.show()
 	%TabContainer.current_tab = 0

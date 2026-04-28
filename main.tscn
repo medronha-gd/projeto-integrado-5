@@ -8,8 +8,22 @@
 [ext_resource type="Resource" uid="uid://cvn8g8sq40gut" path="res://text_resources/instruções.tres" id="4_hc7gj"]
 [ext_resource type="PackedScene" uid="uid://bqskmv7be6ykg" path="res://UI/briefing.tscn" id="4_r1n86"]
 [ext_resource type="PackedScene" uid="uid://cmbasr0necec6" path="res://background_music.tscn" id="6_v7a43"]
+[ext_resource type="Script" uid="uid://di54yea3ltk0d" path="res://briefing_resources/dados_briefing.gd" id="7_w48qg"]
 [ext_resource type="Script" uid="uid://b6xqq10jm8snj" path="res://entidades/avaliador_final.gd" id="7_yn1xw"]
+[ext_resource type="Resource" uid="uid://by5emp8shj3s7" path="res://briefing_resources/primeiro_briefing.tres" id="8_vivmo"]
+[ext_resource type="Resource" uid="uid://b86tlt2s3sc7v" path="res://text_resources/teste_de_texto_03.tres" id="9_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://dt14xlsublpyq" path="res://UI/back_ground.tscn" id="10_gbtns"]
+[ext_resource type="Resource" uid="uid://chkhaehiu1qt" path="res://briefing_resources/briefing_test.tres" id="10_yaehf"]
+
+[sub_resource type="Resource" id="Resource_t01vh"]
+metadata/__load_path__ = "res://addons/placeholder_close.png"
+
+[sub_resource type="Resource" id="Resource_n5t56"]
+script = ExtResource("7_w48qg")
+briefing_name = "teste 03"
+texto = ExtResource("9_2cqfq")
+imagem = SubResource("Resource_t01vh")
+metadata/_custom_type_script = "uid://di54yea3ltk0d"
 
 [node name="CenaTeste" type="Control" unique_id=349374057]
 layout_mode = 3
@@ -40,6 +54,7 @@ layout_mode = 1
 
 [node name="BriefingModule" parent="." unique_id=866072675 node_paths=PackedStringArray("notification_module") instance=ExtResource("4_r1n86")]
 layout_mode = 1
+dados = Array[ExtResource("7_w48qg")]([ExtResource("8_vivmo"), SubResource("Resource_n5t56"), ExtResource("10_yaehf")])
 notification_module = NodePath("../NotificationModule")
 
 [node name="BackgroundMusic" parent="." unique_id=2035694805 instance=ExtResource("6_v7a43")]
